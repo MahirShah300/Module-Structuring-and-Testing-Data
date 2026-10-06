@@ -11,7 +11,7 @@ test("can correctly convert morning time", function () {
 });
 
 test("can correctly convert time after 12 with minutes that are not 00", function () {
-  assert.equal(formatAs12HourClock("23:46"), "23:46 pm");
+  assert.equal(formatAs12HourClock("23:46"), "11:46 pm");
 });
 
 test("can correctly convert noon time as 12pm", function () {
@@ -67,7 +67,7 @@ test("can correctly reject time with text after", function () {
 });
 
 test("can correctly convert time using . as time separator", function () {
-  assert.equal(formatAs12HourClock("01.30"), "1:30 am");
+  assert.equal(formatAs12HourClock("01.30"), "01:30 am");
 });
 
 test("can correctly convert time after 12 using . as time separator", function () {
@@ -76,10 +76,6 @@ test("can correctly convert time after 12 using . as time separator", function (
 
 test("can correctly convert time after using one digit for hour", function () {
   assert.equal(formatAs12HourClock("3:30"), "03:30 am");
-});
-
-test("can correctly convert time after using one digit for hour and . for time separator", function () {
-  assert.equal(formatAs12HourClock("3.30"), "03:30 am");
 });
 
 test("can correctly convert time after using one digit for hour and . for time separator", function () {
