@@ -14,5 +14,5 @@
 // execute the code to ensure all tests pass.
 
 export function isProperFraction(numerator, denominator) {
-  // TODO: Implement this function
+  return numerator < denominator;
 }
