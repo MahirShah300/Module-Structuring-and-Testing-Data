@@ -24,5 +24,32 @@
 // execute the code to ensure all tests pass.
 
 export function getCardValue(card) {
-  // TODO: Implement this function
+  if (
+    card.at(-1) !== "♠" &&
+    card.at(-1) !== "♥" &&
+    card.at(-1) !== "♦" &&
+    card.at(-1) !== "♣"
+  ) {
+    throw new Error(`Expected a number followed by a suit, but got ${card}`);
+  }
+
+  if (!isNaN(card.slice(0, -1))) {
+    if (card.slice(0, -1) >= 2 && card.slice(0, -1) <= 10) {
+      return Number(card.slice(0, -1));
+    }
+  }
+
+  if (
+    card.slice(0, 1) === "J" ||
+    card.slice(0, 1) === "Q" ||
+    card.slice(0, 1) === "K"
+  ) {
+    return 10;
+  }
+
+  if (card.slice(0, 1) === "A") {
+    return 11;
+  }
+
+  throw new Error(`Expected a number followed by a suit, but got ${card}`);
 }
