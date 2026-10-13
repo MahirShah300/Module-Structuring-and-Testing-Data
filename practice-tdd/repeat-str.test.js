@@ -46,6 +46,5 @@ test("should return empty string, count = 0", () => {
 test("should return error, count < 0", () => {
   const str = "hello";
   const count = -5;
-  const repeatedStr = repeatStr(str, count);
-  expect(repeatedStr).toThrow('Error');
+  expect(() => repeatStr(str, count)).toThrow(/Error/);
 });
