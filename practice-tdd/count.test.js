@@ -17,14 +17,14 @@ test("should count multiple occurrences of a character", () => {
   expect(count).toEqual(5);
 });
 
-test("should count multiple occurrences of a character", () => {
+test("should count multiple occurrences of a character when mixed with other characters", () => {
   const str = "ababa";
   const char = "a";
   const count = countChar(str, char);
   expect(count).toEqual(3);
 });
 
-test("should count multiple occurrences of a character", () => {
+test("should count multiple occurrences of a character at the beginning and end of a string", () => {
   const str = "abbba";
   const char = "a";
   const count = countChar(str, char);
