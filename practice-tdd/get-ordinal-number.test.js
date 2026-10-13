@@ -39,4 +39,7 @@ test("should append 'th' for numbers ending not ending with 1,2,3, except those 
   expect(getOrdinalNumber(13)).toEqual("13th");
   expect(getOrdinalNumber(166)).toEqual("166th");
   expect(getOrdinalNumber(238)).toEqual("238th");
+  expect(getOrdinalNumber(211)).toEqual("211th");
+  expect(getOrdinalNumber(312)).toEqual("312th");
+  expect(getOrdinalNumber(413)).toEqual("413th");
 });
