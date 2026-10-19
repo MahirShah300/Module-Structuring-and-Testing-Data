@@ -82,9 +82,6 @@ test(`Should get Invalid when given " 2♦" card with leading whitespace`, () =>
 test(`Should get Invalid when given "2♦ " card with trailing whitespace`, () => {
   expect(() => getCardValue("2♦ ")).toThrow(/Invalid/);
 });
-test(`Should get Invalid when given "2♦ " card with trailing whitespace`, () => {
-  expect(() => getCardValue("2♦ ")).toThrow(/Invalid/);
-});
 test(`Should get Invalid when given "2 ♦" card with trailing whitespace`, () => {
   expect(() => getCardValue("2 ♦")).toThrow(/Invalid/);
 });
