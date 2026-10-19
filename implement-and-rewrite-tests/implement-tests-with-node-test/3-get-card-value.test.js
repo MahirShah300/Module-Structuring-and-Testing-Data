@@ -26,7 +26,7 @@ test("Arbitrary non-card string", () => {
   assert.throws(
     () => getCardValue("invalid"),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -37,7 +37,7 @@ test("Three digit card string", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -48,7 +48,7 @@ test("Card with leading 0", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -59,7 +59,7 @@ test("Card with face followed by number", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -70,7 +70,7 @@ test("Card with number followed by face", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -81,7 +81,7 @@ test("Card with multiple same suit", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -92,7 +92,7 @@ test("Card with multiple different suit", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -103,7 +103,7 @@ test("Card with decimal number", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -114,7 +114,7 @@ test("Card with negative number", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -125,7 +125,7 @@ test("Card with leading whitespace", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -136,7 +136,7 @@ test("Card with trailing whitespace", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -147,7 +147,7 @@ test("Card with middle whitespace", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -158,7 +158,7 @@ test("Card with invalid face", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -169,7 +169,7 @@ test("Card with invalid Ace", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -180,7 +180,7 @@ test("Card with no suit", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -191,7 +191,7 @@ test("Card with no rank", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -202,7 +202,7 @@ test("Empty String", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -213,7 +213,7 @@ test("Card with invalid number one above max", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );
@@ -224,7 +224,7 @@ test("Card with invalid number one below min", () => {
   assert.throws(
     () => getCardValue(card),
     new RegExp(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     ),
     "Expected clear error"
   );

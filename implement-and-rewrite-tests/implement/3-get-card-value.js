@@ -33,7 +33,7 @@ export function getCardValue(card) {
 
   if (!validSuits.includes(suit)) {
     throw new Error(
-      `Invalid input. Expected a number followed by a suit, but got "${card}"`
+      `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
     );
   }
   if (validNumberRanks.includes(rank)) {
@@ -49,6 +49,6 @@ export function getCardValue(card) {
   }
 
   throw new Error(
-    `Invalid input. Expected a number followed by a suit, but got "${card}"`
+    `Invalid input. Expected a valid rank followed by a suit, but got "${card}"`
   );
 }
